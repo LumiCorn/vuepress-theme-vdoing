@@ -46,3 +46,9 @@ jobs:
           remote_addr=https://${user_name}:${{secrets.GITHUB_TOKEN}}@${remote_addr}
           git remote add origin ${remote_addr}
           git push origin HEAD:$deploy_branch --force # 推送到github $deploy_branch分支
+          
+      - name: Apply-Theme # 步骤4
+        run: |
+          npm install vuepress-theme-vdoing -D
+          
+        
